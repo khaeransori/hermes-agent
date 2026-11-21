@@ -101,6 +101,7 @@ GITHUB_TAP_LABELS = {
     "NVIDIA/skills": "NVIDIA",
     "VoltAgent/awesome-agent-skills": "VoltAgent",
     "garrytan/gstack": "gstack",
+    "khaeransori/pstack-hermes": "pstack",
     "MiniMax-AI/cli": "MiniMax",
     "wandb/skills": "Weights & Biases",
     "qdrant/skills": "Qdrant",
@@ -221,7 +222,7 @@ def _source_url(source: str, identifier: str, extra: dict) -> str:
     # GitHub-backed taps (openai/anthropic/nvidia/hf/gstack/VoltAgent/...):
     # identifier is "owner/repo/<path...>" — link to the directory on GitHub.
     if src in {"github", "openai", "anthropic", "huggingface", "nvidia",
-               "gstack", "voltagent", "minimax"}:
+               "gstack", "pstack", "voltagent", "minimax"}:
         parts = [p for p in identifier.split("/") if p]
         if len(parts) >= 2:
             owner, repo = parts[0], parts[1]

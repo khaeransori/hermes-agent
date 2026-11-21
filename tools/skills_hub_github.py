@@ -29,6 +29,7 @@ GITHUB_TAP_PROVIDERS = {
     "minimax-ai/cli": "MiniMax", "wandb/skills": "Weights & Biases", "qdrant/skills": "Qdrant",
     "pinecone-io/skills": "Pinecone", "makenotion/skills": "Notion", "airtable/skills": "Airtable",
     "shopify/shopify-ai-toolkit": "Shopify",
+    "khaeransori/pstack-hermes": "pstack",
 }
 
 # Accepted ``--source`` provider filters (lowercased). Not real source ids —
@@ -223,6 +224,9 @@ class GitHubSource(SkillSource):
         {"repo": "Airtable/skills", "path": "plugins/airtable/skills/"},
         {"repo": "Shopify/Shopify-AI-Toolkit", "path": "skills/"},
         {"repo": "garrytan/gstack", "path": ""},
+        # pstack (cursor/plugins, MIT) built for Hermes: one self-contained folder per skill with the
+        # Cursor-to-Hermes tool adapter in references/. Community trust; every folder scans `safe`.
+        {"repo": "khaeransori/pstack-hermes", "path": "skills/"},
         # --- Science bucket ---
         # Two scientific-skill repos share one hub category via the tap-level "bucket" key so
         # their skills surface together. Both stay `community` trust on purpose (NOT in

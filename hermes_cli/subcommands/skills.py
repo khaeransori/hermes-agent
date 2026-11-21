@@ -14,7 +14,7 @@ def _flag(parser, *names, help, **kw):
 # Registry sources, then provider filters (GitHub taps stored under source="github").
 _SOURCE_CHOICES = [
     "all", "official", "skills-sh", "well-known", "github", "clawhub", "lobehub", "browse-sh",
-    "nvidia", "openai", "anthropic", "huggingface", "voltagent", "gstack", "minimax"]
+    "nvidia", "openai", "anthropic", "huggingface", "voltagent", "gstack", "pstack", "minimax"]
 
 
 def build_skills_parser(subparsers, *, cmd_skills: Callable) -> None:
